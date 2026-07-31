@@ -1,0 +1,273 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cm-primary: #0f766e;
+  --cm-primary-hover: #115e59;
+  --cm-bg: #f8fafc;
+  --cm-text: #1f2937;
+  --cm-border: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--cm-bg);
+  color: var(--cm-text);
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+/* Header & Navbar */
+.cm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: var(--cm-primary);
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.cm-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.cm-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cm-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.cm-nav a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+/* Hero Section */
+.cm-hero {
+  background: white;
+  border: 1px solid var(--cm-border);
+  border-left: 5px solid var(--cm-primary);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cm-hero h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--cm-primary);
+  font-size: 1.35rem;
+}
+
+.cm-hero p {
+  margin: 0;
+  color: #4b5563;
+}
+
+/* Category List */
+#categories ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+}
+
+#categories li {
+  margin-bottom: 0.25rem;
+}
+
+/* Product Grid (Responsive) */
+.cm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Styles */
+.cm-card {
+  background: #ffffff;
+  border: 1px solid var(--cm-border);
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cm-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cm-card figure {
+  margin: 0;
+  text-align: center;
+}
+
+.cm-card img {
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.cm-card figcaption {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.cm-card-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.cm-card-category {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.cm-card-price {
+  font-weight: 700;
+  color: var(--cm-primary);
+  margin-top: auto;
+  font-size: 1.1rem;
+}
+
+/* Inventory Total */
+[data-testid="cm-inventory-total"] {
+  background: white;
+  border: 1px solid var(--cm-border);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+[data-testid="cm-inventory-total"] p {
+  margin: 0 0 0.25rem 0;
+}
+
+[data-testid="cm-inventory-total"] p:last-child {
+  margin: 0;
+}
+
+/* Forms & Footer */
+form {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--cm-border);
+  margin-bottom: 1.5rem;
+  max-width: 32rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--cm-text);
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--cm-primary);
+  border-color: transparent;
+}
+
+button[type="submit"] {
+  background: var(--cm-primary);
+  color: #ffffff;
+  padding: 0.55rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: var(--cm-primary-hover);
+}
+
+footer {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--cm-border);
+}
+
+footer h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+footer p {
+  margin: 1rem 0 0 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Responsive Media Queries (Mobile Breakpoint) */
+@media (max-width: 640px) {
+  .cm-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cm-nav {
+    gap: 0.75rem 1rem;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
