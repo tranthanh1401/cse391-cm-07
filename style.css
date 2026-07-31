@@ -271,3 +271,17 @@ footer p {
     max-width: 100%;
   }
 }
+
+.cm-filter-wrapper {
+  margin-bottom: 1rem;
+}
+
+#sort-price {
+  margin-left: 1rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+[data-testid="cm-inventory-total"] {
+  margin-top: 1rem;
+}
